@@ -71,7 +71,11 @@ class PresentationTest {
         this.p.setVisitedPlaces(new String[]{"Berlin", "Madryt"});
         fullDesc = this.p.getPresentationStory();
 
-        Assertions.assertEquals("Nazywam się Julian Bednarz, mam 22 lata a moim miejscem urodzenia jest Warszawa. Mam niewielką liczbę znajomych na FB. W życiu odwiedziłem takie miejsca jak: Berlin, Madryt.", fullDesc);
+        Assertions.assertNotNull(this.p.getFullName());
+        Assertions.assertNotNull(this.p.getAge());
+        Assertions.assertNotNull(this.p.getPlaceOfBirth());
+        Assertions.assertNotNull(this.p.getVisitedPlaces());
 
+        Assertions.assertEquals("Nazywam się Julian Bednarz, mam 22 lata a moim miejscem urodzenia jest Warszawa. Mam niewielką liczbę znajomych na FB. W życiu odwiedziłem takie miejsca jak: Berlin, Madryt.", fullDesc);
     }
 }
