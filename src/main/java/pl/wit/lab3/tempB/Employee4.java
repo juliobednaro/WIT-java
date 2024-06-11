@@ -28,7 +28,7 @@ public class Employee4 extends Person4 {
 
 	@Override
 	public boolean search(Map<String, Pair<Object, Byte>> conditions) throws Exception {
-		if ()
+		return false;
 	}
 
 	protected boolean matches(String firstName,String lastName,Date birthFrom,Date birthTo,Date employmentFrom, Date employmentTo,BigDecimal sallaryFrom, BigDecimal sallaryTo ) {
@@ -65,7 +65,7 @@ public class Employee4 extends Person4 {
 	private boolean matchesSallary(BigDecimal sallaryFrom, BigDecimal sallaryTo) {
 		if(sallaryFrom!=null) {
 			if(this.sallary!=null) {
-				if(!(this.sallary.compareTo(sallaryFrom)<=0));
+				if(!(this.sallary.compareTo(sallaryFrom)<=0))
 					return false;
 			}else
 				return false;
